@@ -9,6 +9,7 @@ public class BlackBoxTest {
         Double adjustedMax = Double.MAX_VALUE/(2-Math.pow(2,-52));
 
          Assertions.assertThrows(IllegalArgumentException.class, ()->MyMath.power(-3, 2));
+         Assertions.assertThrows(IllegalArgumentException.class, ()->MyMath.power(Integer.MAX_VALUE, 2));
          Assertions.assertEquals(Double.NEGATIVE_INFINITY, MyMath.power(-2, Integer.MAX_VALUE));
          Assertions.assertEquals(Double.POSITIVE_INFINITY,MyMath.power(2, 1024));
          Assertions.assertEquals(adjustedMax,MyMath.power(2, 1023));

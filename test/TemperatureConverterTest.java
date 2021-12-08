@@ -218,7 +218,7 @@ public class TemperatureConverterTest {
     }
 
     @Test
-    @DisplayName("CMaxException")
+    @DisplayName("FMaxException")
     public void testFMax() {
         double tempF = 9900000000032.151;
         Assertions.assertThrows(IllegalArgumentException.class, ()->instance.F2K(tempF));
@@ -226,7 +226,7 @@ public class TemperatureConverterTest {
     }
 
     @Test
-    @DisplayName("CMinException")
+    @DisplayName("FMinException")
     public void testFMin() {
         double tempF = -459.671;
         Assertions.assertThrows(IllegalArgumentException.class, ()->instance.F2K(tempF));
